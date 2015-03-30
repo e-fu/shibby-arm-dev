@@ -32,5 +32,5 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ADD get_shibby.sh /bin/
 ADD copy_source_to_compile.sh /bin/
-RUN useradd -ms /bin/bash tomato && echo 'tomato:shibby-arm' | chpasswd
+RUN useradd -ms /bin/bash tomato && echo 'tomato:shibby-arm' | chpasswd && adduser tomato sudo
 
