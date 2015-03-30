@@ -8,21 +8,22 @@ Install the Container on your host:
 You can SSH to this Container. The root password is: shibby-arm.
 
     docker ps | grep 22/tcp
-    # Returns something like:
+    # Returns something like this:
     # 0.0.0.0:49154->22/tcp
     ssh root@0.0.0.0:49154
     # password: shibby-arm
 
 Run get_shibby.sh to get the ARM sources and set your environment. It will download the sources from bitbucket and set the build ENV for it.
 
-# Run to get the shibby sources
+## Run get_shibby.sh to get the shibby sources:
+
     get_shibby.sh
 
 You will find the sources in:
 
     cd /data/tomato-arm/release/src-rt-6.x.4708/
 
-Don't forget to run once:
+Don't forget to run once (1 time!):
 
     # Set $PATH and reload:
     echo "export PATH=$PATH:/opt/brcm-arm/bin:/sbin/" >> ~/.profile && source ~/.profile

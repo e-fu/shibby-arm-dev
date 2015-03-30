@@ -1,13 +1,11 @@
 #!/bin/sh
-rm /opt/brcm-arm
-mkdir /data
-cd /data
-git clone https://bitbucket.org/efries/tomato-arm.git
-cd /data/tomato-arm/release/src-rt-6.x.4708
-git clean -dfx && git checkout .
-ln -s /data/tomato-arm/release/src-rt-6.x.4708/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3 /opt/brcm-arm
-echo "To compile, do something like:"
-echo "make dir868l V1=VZPRVPN V2=2.6-XXX"
-echo ""
-echo "But first, if you didn't make it yet:"
-echo 'echo "export PATH=$PATH:/opt/brcm-arm/bin:/sbin/" >> ~/.profile && source ~/.profile'
+echo 'Remember: For security reasons please compile as user: tomato'
+[ -d /home/tomato/tomato-arm ] && rm -rf /home/tomato/tomato-arm
+[ -d /opt/brcm-arm ] && rm -rf /opt/brcm-arm
+[ -d /opt/hndtools-arm-linux-2.6.36-uclibc-4.5.3 ] && rm -rf /opt/hndtools-arm-linux-2.6.36-uclibc-4.5.3
+mkdir -p /home/tomato/
+cd /home/tomato/
+echo 'Cloning Shibby-ARM Git into /home/tomato/tomato-arm/'
+git clone https://bitbucket.org/pl_shibby/tomato-arm.git
+echo 'To copy and compile the source run:'
+echo 'copy_source_to_compile.sh'
