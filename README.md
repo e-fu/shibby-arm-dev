@@ -28,6 +28,8 @@ Don't forget to run once (1 time!):
     # Set $PATH and reload:
     echo "export PATH=$PATH:/opt/brcm-arm/bin:/sbin/" >> ~/.profile && source ~/.profile
 
+    sudo ln -s /home/tomato/tomato-make/toolchains/hndtools-arm-linux-2.6.36-uclibc-4.5.3 /opt/hndtools-arm-linux-2.6.36-uclibc-4.5.3
+
 
 Now build the firmware with make. Try make help or look into the Makefile in this directory to know your options.
 
