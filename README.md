@@ -53,3 +53,7 @@ Try this:
      cd /home/tomato/tomato-arm/release/src-rt-6.x.4708/
      git clean -dfx && git checkout .
      
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/efries/shibby-arm-dev/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
